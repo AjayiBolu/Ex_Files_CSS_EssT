@@ -1,0 +1,11 @@
+#projects img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+footer#contact img {
+  width: 32px;
+  height: auto;
+}
