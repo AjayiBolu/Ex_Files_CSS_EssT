@@ -1,0 +1,52 @@
+/* CUSTOM PROPERTIES 
+---------------------------------------*/
+:root {
+  --darkgray:       #333333;
+  --whitesmoke:     #F5F5F5;
+  --darkslateblue:  #483D8B;
+  --color-dark:     var(--darkgray);
+  --color-light:    var(--whitesmoke);
+  --color-primary:  var(--darkslateblue);
+}
+
+
+/* Global Styles 
+---------------------------------------*/
+a {
+  color: var(--color-dark);
+}
+.bg-dark a, .bg-primary a {
+  color: var(--color-light);
+}
+.bg-dark {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+.bg-light {
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+.bg-primary {
+  background: var(--color-primary);
+  color: var(--color-light);
+}
+
+
+/* Header + Nav 
+---------------------------------------*/
+
+
+/* About 
+---------------------------------------*/
+
+
+/* Projects 
+---------------------------------------*/
+
+
+/* Resume 
+---------------------------------------*/
+
+
+/* Footer 
+---------------------------------------*/
