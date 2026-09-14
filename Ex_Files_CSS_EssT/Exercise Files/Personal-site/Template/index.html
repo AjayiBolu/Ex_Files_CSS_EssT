@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolu Ajayi Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Ms+Madi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -39,32 +42,24 @@
         <p>My project portfolio spans full-stack development, systems programming, and DevOps infrastructure. I've built a secure employee management system using Java and MySQL with role-based access control and normalized database design, demonstrating my ability to architect scalable systems. In the realm of infrastructure and operations, I've developed a comprehensive Linux-based home lab environment using virtualization and networking, where I implemented user management, system configurations, and resolved hardware and OS-level issues to improve reliability and uptime-core skills essential to DevOps engineering.</p>
 
         <!-- Add more projects by copying the whole <section> block. -->
-        <section>
-          <img srcset="images/filename.png, 
-                       images/filename.png 2x"
-               src="images/DVD_Rental_Query.png"
-               alt="Database query Visually represented in a diagram">
-          
+        <section class="project-item">
+
           <h3>Employee Management System</h3>
           <p>Developed a secure employee management system supporting role-based access control and CRUD operations across 5+ core
 business entities, enabling streamlined management of employee records and payroll data.</p>
-          <a href="https://github.com/AjayiBolu/Software-Development-Group-Project" target="_blank">Link to project</a>          
+          <a href="https://github.com/AjayiBolu/Software-Development-Group-Project" target="_blank">Link to project</a>
         </section>
-                <section>
+        <section class="project-item">
           <img srcset="images/DVD_Rental_Query.png 500w,
                        images/DVD_Rental_Query.png 1000w"
                src="images/DVD_Rental_Query.png"
                alt="Database query Visually represented in a diagram">
-          
+
           <h3>Greenwashing</h3>
           <p>Developed an AI-powered greenwashing detection platform during HackATL that analyzed 50+ corporate sustainability claims
 using retrieval-augmented generation and vector search.</p>
-          <a href="https://github.com/hiderrick/greenwashing-detection-hacklanta" target="_blank">Link to project</a>       
+          <a href="https://github.com/hiderrick/greenwashing-detection-hacklanta" target="_blank">Link to project</a>
         </section>
-                  <img srcset="images/greenwashing.png 500w,
-                       images/greenwashing.png 1000w"
-               src="images/greenwashing.png"
-               alt="Database query Visually represented in a diagram">
       </section><!-- end of PROJECTS -->
 
 
@@ -127,7 +122,7 @@ using retrieval-augmented generation and vector search.</p>
     <footer id="contact">
       <h2>Say hello or chat with me!</h2>
       <p>Email me at <a href="mailto:israelajayibolu@gmail.com">israelajayibolu@gmail.com</a> or visit one of the links below.</p>
-      <ul>
+      <ul class="list-reset socials-list">
         <li>
           <a href="https://www.linkedin.com/in/israelajayibolu/" target="_blank">
             <img src="images/icon-linkedin.png" alt="LinkedIn icon">
