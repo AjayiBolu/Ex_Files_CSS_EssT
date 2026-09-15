@@ -29,7 +29,7 @@
 
     <main>
       <!-- //  ABOUT  // -->
-      <section id="about">
+      <section id="about" class="bg-primary content-wrap">
         <h2>About</h2>
         <p>As a DevOps engineer, I specialize in designing and maintaining scalable infrastructure solutions that bridge the gap between development and operations. My expertise spans cloud platforms, containerization, CI/CD pipelines, and infrastructure-as-code, enabling teams to deploy reliable applications efficiently and at scale.</p>
         <p>I'm passionate about automating complex workflows, optimizing system performance, and fostering a culture of collaboration between development and operations teams. My goal is to build robust, secure, and maintainable infrastructure that empowers organizations to innovate faster and respond to market demands with confidence..</p>
@@ -37,82 +37,86 @@
 
 
       <!-- //  PROJECTS  // -->
-      <section id="projects">
+      <section id="projects" class="content-wrap">
         <h2>Projects</h2>
         <p>My project portfolio spans full-stack development, systems programming, and DevOps infrastructure. I've built a secure employee management system using Java and MySQL with role-based access control and normalized database design, demonstrating my ability to architect scalable systems. In the realm of infrastructure and operations, I've developed a comprehensive Linux-based home lab environment using virtualization and networking, where I implemented user management, system configurations, and resolved hardware and OS-level issues to improve reliability and uptime-core skills essential to DevOps engineering.</p>
 
         <!-- Add more projects by copying the whole <section> block. -->
         <section class="project-item">
-
-          <h3>Employee Management System</h3>
-          <p>Developed a secure employee management system supporting role-based access control and CRUD operations across 5+ core
+          <div class="project-info">
+            <h3>Employee Management System</h3>
+            <p>Developed a secure employee management system supporting role-based access control and CRUD operations across 5+ core
 business entities, enabling streamlined management of employee records and payroll data.</p>
-          <a href="https://github.com/AjayiBolu/Software-Development-Group-Project" target="_blank">Link to project</a>
+            <a href="https://github.com/AjayiBolu/Software-Development-Group-Project" target="_blank">Link to project</a>
+          </div>
         </section>
         <section class="project-item">
           <img srcset="images/DVD_Rental_Query.png 500w,
                        images/DVD_Rental_Query.png 1000w"
                src="images/DVD_Rental_Query.png"
                alt="Database query Visually represented in a diagram">
-
-          <h3>Greenwashing</h3>
-          <p>Developed an AI-powered greenwashing detection platform during HackATL that analyzed 50+ corporate sustainability claims
+          <div class="project-info">
+            <h3>Greenwashing</h3>
+            <p>Developed an AI-powered greenwashing detection platform during HackATL that analyzed 50+ corporate sustainability claims
 using retrieval-augmented generation and vector search.</p>
-          <a href="https://github.com/hiderrick/greenwashing-detection-hacklanta" target="_blank">Link to project</a>
+            <a href="https://github.com/hiderrick/greenwashing-detection-hacklanta" target="_blank">Link to project</a>
+          </div>
         </section>
       </section><!-- end of PROJECTS -->
 
 
       <!-- //  RESUME  // -->
-      <section id="resume">
+      <section id="resume" class="resume content-wrap">
         <h2>Resume</h2>
-        
-        <!-- Profile -->
-        <section>
-          <h3>Profile</h3>
-          <p>To be updated. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nisi dicta, sit rem, ab aperiam possimus vitae dolores ea perspiciatis cumque doloribus rerum praesentium saepe nihil facere est tenetur delectus.</p>
-        </section>
-        
-        <!-- Work Experience -->
-        <section>
-          <h3>Work Experience</h3>
-          
-          <section>
-            <h4>Media Team Leader</h4>
-            <p>RCCG Treasure House</p>
-            <p>Jun 2025 – Present</p>
-            <p>Lead a volunteer media team supporting weekly services and special events for 100+ attendees, coordinating livestreaming, audio, lighting, and presentation systems to ensure reliable production quality.</p>
-            <ul>
-              <li>Manage a team of 5–10 volunteer media members for weekly services and special events</li>
-              <li>Coordinate and maintain technical infrastructure including livestreaming, audio, lighting, and presentation systems</li>
-              <li>Troubleshoot and resolve technical issues to minimize service disruptions and maintain consistent broadcast quality</li>
-              <li>Support both in-person and remote audiences through reliable streaming infrastructure</li>
-            </ul>
+
+        <div class="resume-container">
+          <!-- Profile -->
+          <section class="profile">
+            <h3>Profile</h3>
+            <p>To be updated. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nisi dicta, sit rem, ab aperiam possimus vitae dolores ea perspiciatis cumque doloribus rerum praesentium saepe nihil facere est tenetur delectus.</p>
           </section>
 
-          <section>
-            <h4>Technical Preparation Program Participant</h4>
-            <p>AmazonNext x CodePath</p>
-            <p>Jun 2024 – Aug 2024</p>
-            <p>Selected for a competitive technical preparation program focused on data structures, algorithms, and software engineering interview readiness with Amazon engineers.</p>
-            <ul>
-              <li>Completed 50+ algorithmic coding challenges covering arrays, graphs, trees, dynamic programming, and complexity analysis</li>
-              <li>Participated in mock technical interviews and mentorship sessions with Amazon engineers</li>
-              <li>Strengthened problem-solving and communication skills through intensive technical training</li>
-            </ul>
-          </section>
-        </section><!-- end of Work Experience -->
+          <!-- Work Experience -->
+          <section class="work-experience">
+            <h3>Work Experience</h3>
 
-        <!-- Education -->
-        <section>
-          <h3>Education</h3>
-          
-          <section>
-            <h4>Georgia State University - Atlanta, Georgia</h4>
-            <p>Bachelor of Science in Computer Science, May 2027</p>
-            <p>Dean's List student and RISE in Computing Scholar. Relevant coursework includes Data Structures, Object-Oriented Programming, System-level Programming, Software Development, and Applied Probability & Statistics.</p>
-          </section>
-        </section><!-- end of Education -->
+            <section class="job-item">
+              <h4 class="position">Media Team Leader</h4>
+              <p class="organization">RCCG Treasure House</p>
+              <p class="dates-worked">Jun 2025 – Present</p>
+              <p>Lead a volunteer media team supporting weekly services and special events for 100+ attendees, coordinating livestreaming, audio, lighting, and presentation systems to ensure reliable production quality.</p>
+              <ul>
+                <li>Manage a team of 5–10 volunteer media members for weekly services and special events</li>
+                <li>Coordinate and maintain technical infrastructure including livestreaming, audio, lighting, and presentation systems</li>
+                <li>Troubleshoot and resolve technical issues to minimize service disruptions and maintain consistent broadcast quality</li>
+                <li>Support both in-person and remote audiences through reliable streaming infrastructure</li>
+              </ul>
+            </section>
+
+            <section class="job-item">
+              <h4 class="position">Technical Preparation Program Participant</h4>
+              <p class="organization">AmazonNext x CodePath</p>
+              <p class="dates-worked">Jun 2024 – Aug 2024</p>
+              <p>Selected for a competitive technical preparation program focused on data structures, algorithms, and software engineering interview readiness with Amazon engineers.</p>
+              <ul>
+                <li>Completed 50+ algorithmic coding challenges covering arrays, graphs, trees, dynamic programming, and complexity analysis</li>
+                <li>Participated in mock technical interviews and mentorship sessions with Amazon engineers</li>
+                <li>Strengthened problem-solving and communication skills through intensive technical training</li>
+              </ul>
+            </section>
+          </section><!-- end of Work Experience -->
+
+          <!-- Education -->
+          <section class="education">
+            <h3>Education</h3>
+
+            <section class="school-item">
+              <h4 class="school">Georgia State University - Atlanta, Georgia</h4>
+              <p class="degree-field">Bachelor of Science in Computer Science, May 2027</p>
+              <p>Dean's List student and RISE in Computing Scholar. Relevant coursework includes Data Structures, Object-Oriented Programming, System-level Programming, Software Development, and Applied Probability & Statistics.</p>
+            </section>
+          </section><!-- end of Education -->
+        </div>
 
       </section><!-- end of RESUME -->
     </main>
