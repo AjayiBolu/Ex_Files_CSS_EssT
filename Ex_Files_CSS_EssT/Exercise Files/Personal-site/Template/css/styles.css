@@ -1,39 +1,45 @@
-/* CUSTOM PROPERTIES 
+/* CUSTOM PROPERTIES
 ---------------------------------------*/
 :root {
+  /* base color palette used everywhere via var() */
   --darkgray:       #333333;
   --whitesmoke:     #F5F5F5;
   --darkslateblue:  #483D8B; /* rgb(72 61 139) */
+  /* semantic aliases so the rest of the file never references a raw color name */
   --color-dark:     var(--darkgray);
   --color-light:    var(--whitesmoke);
   --color-primary:  var(--darkslateblue);
 
-  --font-size-h1:        5.5rem;
-  --font-size-h2:        3rem;
-  --font-size-base:      0.9375rem;
-  --font-size-tagline:   1.3rem;
-  --font-size-small:     0.7rem;
+  /* shared type scale */
+  --font-size-h1:        5.5rem;   /* hero name in the header */
+  --font-size-h2:        3rem;     /* section headings (About/Projects/Resume) */
+  --font-size-base:      0.9375rem; /* default body copy size */
+  --font-size-tagline:   1.3rem;   /* subtitle under the header h1 */
+  --font-size-small:     0.7rem;   /* buttons, copyright line */
 }
 
 
-/* Global Styles 
+/* Global Styles
 ---------------------------------------*/
 /* Alternative box model */
 html {
   box-sizing: border-box;
+  /* keeps anchor-link targets from hiding behind the fixed nav bar */
   scroll-padding-top: 60px;
 }
 *, *::before, *::after {
+  /* every element inherits border-box instead of redeclaring it */
   box-sizing: inherit;
 }
 
 html, body {
+  /* lets header's height:100%/min-height:100vh math work */
   height: 100%;
 }
 body {
 	margin: 0;
 	padding: 0;
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif; /* body font loaded from Google Fonts */
   font-size: var(--font-size-base);
   line-height: 1.4;
 }
@@ -50,13 +56,16 @@ h2 {
   font-size: var(--font-size-h2);
 }
 h1, h2 {
+  /* cursive display font for the big headings only */
   font-family: "Ms Madi", cursive;
   font-weight: 400;
 }
 h1, h2, h3, h4 {
+  /* remove default browser heading margins so spacing is controlled per-section */
   margin: 0;
 }
 .bg-dark a, .bg-primary a {
+  /* keep links readable on dark/purple backgrounds */
   color: var(--color-light);
 }
 .bg-dark {
@@ -68,20 +77,24 @@ h1, h2, h3, h4 {
   color: var(--color-dark);
 }
 .bg-primary {
+  /* purple band background, used on the About section */
   background: var(--color-primary);
   color: var(--color-light);
 }
 .list-reset {
+  /* strips default <ul>/<ol> styling for lists used as layout (nav, socials) */
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 .content-wrap {
+  /* centers section content and caps its width so text doesn't stretch edge-to-edge */
   max-width: 800px;
   margin: 0 auto;
   padding: 60px;
 }
 .btn {
+  /* reusable pill-style button (not currently used but available) */
   background: var(--color-primary);
   color: var(--color-light);
   text-decoration: none;
@@ -95,6 +108,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.08rem;
 }
 .btn:hover {
+  /* invert colors on hover */
   background: var(--color-light);
   color: var(--color-dark);
 }
@@ -103,8 +117,10 @@ h1, h2, h3, h4 {
 /* Header + Nav
 ---------------------------------------*/
 header {
+  /* full-viewport hero so the background photo is edge-to-edge */
   min-height: 100vh;
   margin: 0;
+  /* purple tint layered on top of the photo so white text stays readable */
   background-image: linear-gradient(rgb(72 61 139 / .45),
                                     rgb(72 61 139 / .45)),
                     url(../images/georgia-state-university-1.png);
@@ -112,25 +128,28 @@ header {
   background-position: center;
   background-size: cover;
   color: var(--color-light);
+  /* center the name/tagline block both ways */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 nav {
+  /* stays pinned to the top of the viewport while the page scrolls */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
-  background: rgb(0 0 0 / .35);
-  z-index: 10;
+  background: rgb(0 0 0 / .35); /* subtle dark bar so nav text is legible over any background */
+  z-index: 10; /* sit above the header content */
 }
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   height: 100%;
+  /* center the nav links horizontally and vertically inside the bar */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +158,7 @@ nav ul li {
   display: inline-block;
 }
 nav ul li a {
-  padding: 20px 10px;
+  padding: 20px 10px; /* generous click target + spacing between links */
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
@@ -151,19 +170,23 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 hgroup {
+  /* tighten line spacing between the name and tagline */
   line-height: 0.9;
 }
 hgroup h1 {
   color: var(--color-light);
+  /* soft shadow so the cursive name stays readable over busy parts of the photo */
   text-shadow: 0 2px 12px rgb(0 0 0 / .35);
 }
 hgroup p {
+  /* tagline styling: spaced-out uppercase caption under the name */
   font-size: var(--font-size-tagline);
   margin: 0 0 25px;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
 hgroup a {
+  /* outlined "pill" link (LinkedIn) instead of a filled button, to sit lightly on the photo */
   color: var(--color-light);
   text-decoration: none;
   border: 1px solid var(--color-light);
@@ -174,29 +197,35 @@ hgroup a {
   letter-spacing: 0.08rem;
 }
 hgroup a:hover {
+  /* invert to a filled button on hover */
   background: var(--color-light);
   color: var(--color-primary);
 }
 @media screen and (orientation: portrait){
   header {
+    /* redundant with the base min-height:100vh above, kept explicit for portrait phones */
     min-height: 100vh;
   }
 }
 
 
 
-/* About 
+/* About
 ---------------------------------------*/
+/* no section-specific rules needed: the purple background and cursive h2
+   come from the shared .bg-primary / h2 rules above, applied via HTML classes */
 
 
 /* Projects
 ---------------------------------------*/
 .project-item {
+  /* card look: bordered box around each project */
   border: 1px solid var(--color-primary);
   padding: 20px;
   margin-bottom: 20px;
 }
 .project-item img {
+  /* mobile-first: image spans the full card width, stacked above the text */
   width: 100%;
   margin-bottom: 15px;
 }
@@ -205,24 +234,28 @@ hgroup a:hover {
 }
 @media screen and (min-width: 750px){
   .project-item {
+    /* on wider screens, lay the thumbnail and text side by side */
     display: flex;
     align-items: flex-start;
     gap: 20px;
   }
   .project-item img {
+    /* fixed-width thumbnail instead of stretching full width */
     width: 220px;
     flex-shrink: 0;
     margin-bottom: 0;
   }
   .project-info {
+    /* text block takes up the remaining space next to the thumbnail */
     flex: 1;
   }
 }
 
 
-/* Resume 
+/* Resume
 ---------------------------------------*/
 .resume.content-wrap {
+  /* resume needs more room than the default 800px content-wrap for its two-column layout */
   max-width: 1000px;
   margin-bottom: 30px;
 }
@@ -230,9 +263,11 @@ hgroup a:hover {
   margin-top: 15px;
 }
 .resume h4 {
+  /* space above each job/school title */
   margin-top: 20px;
 }
 .job-item, .school-item {
+  /* breathing room between multiple jobs/schools */
   margin-bottom: 25px;
 }
 .organization, .degree-field {
@@ -242,29 +277,34 @@ hgroup a:hover {
   margin: 0;
 }
 .position, .organization, .dates-worked, .school {
+  /* highlight the key resume labels in the brand color */
   color: var(--color-primary);
 }
 
 @media screen and (min-width: 900px) {
   .resume-container {
+    /* two-column layout: Profile/Education on the left, Work Experience on the right */
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 225px 1fr;
     gap: 30px;
   }
   .work-experience {
+    /* spans both rows in the right column */
     grid-row: 1 / 3;
     grid-column: 2 / 3;
     border-left: 1px solid var(--color-primary);
     padding-left: 30px;
   }
   .profile {
+    /* divider between Profile (top-left) and Education (bottom-left) */
     border-bottom: 1px solid var(--color-primary);
   }
 }
 
 @media screen and (max-width: 899px) {
   .resume h3 {
+    /* on narrow screens the grid collapses, so use a rule under each heading instead */
     border-bottom: 1px solid var(--color-primary);
     margin-top: 30px;
   }
@@ -273,13 +313,14 @@ hgroup a:hover {
 
 
 
-/* Footer 
+/* Footer
 ---------------------------------------*/
 footer {
   text-align: center;
   padding: 60px;
 }
 .socials-list {
+  /* row of centered social icons */
   display: flex;
   justify-content: center;
 }
